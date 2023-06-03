@@ -19,10 +19,17 @@ public class UserServiceImpl implements UserService{
 //    private UserDao userDao;
 
     // 第二种方式：set注入
+//    private UserDao userDao;
+//
+//    @Autowired
+//    public void setUserDao(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
+    // 第三种方式：构造方法注入
     private UserDao userDao;
 
     @Autowired
-    public void setUserDao(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
 
