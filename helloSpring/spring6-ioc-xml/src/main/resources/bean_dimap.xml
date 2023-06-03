@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="teacher1" class="org.example.dimap.Teacher">
+        <property name="tId" value="S001"></property>
+        <property name="tName" value="Tom"></property>
+    </bean>
+    <bean id="teacher2" class="org.example.dimap.Teacher">
+        <property name="tId" value="S002"></property>
+        <property name="tName" value="Jack"></property>
+    </bean>
+
+    <bean id="student" class="org.example.dimap.Student">
+        <property name="sId" value="SA001"></property>
+        <property name="sName" value="李华"></property>
+        <!-- map属性注入 -->
+        <property name="tMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>100</value>
+                    </key>
+                    <ref bean="teacher1"></ref>
+                </entry>
+                <entry>
+                <key>
+                    <value>200</value>
+                </key>
+                <ref bean="teacher2"></ref>
+            </entry>
+
+            </map>
+        </property>
+    </bean>
+</beans>
