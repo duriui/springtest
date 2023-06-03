@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 1、获取bean演示，user对象创建 并且只能有一个-->
+    <bean id="user" class="org.example.User"></bean>
+
+    <!-- 2、一个接口实现类获取过程-->
+    <bean id="userdaoimpl" class="org.example.bean.UserDaoimpl"></bean>
+    <!--<！bean id="userdaoimpl1" class="org.example.bean.UserDaoImpl2"></bean>-->
+
+</beans>
