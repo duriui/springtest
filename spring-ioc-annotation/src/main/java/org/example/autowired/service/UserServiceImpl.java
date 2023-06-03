@@ -15,8 +15,16 @@ public class UserServiceImpl implements UserService{
 
     //注入dao
     // 第一种方式：属性注入
-    @Autowired  //根据类型找到对应对象，完成注入
+//    @Autowired  //根据类型找到对应对象，完成注入
+//    private UserDao userDao;
+
+    // 第二种方式：set注入
     private UserDao userDao;
+
+    @Autowired
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void add() {
