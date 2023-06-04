@@ -2,6 +2,7 @@ package org.example.autowired.controller;
 
 import org.example.autowired.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -29,7 +30,8 @@ public class UserController {
     // 第三种方式：构造方法注入
     private UserService userService;
 
-    @Autowired
+    @Autowired   //根据类型进行匹配    联合@Qualifier注入，支持按名称注入
+
     public UserController(UserService userService) {
         this.userService = userService;
     }
