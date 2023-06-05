@@ -12,6 +12,7 @@
         <module>springFirst</module>
         <module>spring6-ioc-xml</module>
         <module>spring-ioc-annotation</module>
+        <module>dr-spring</module>
     </modules>
 
     <properties>

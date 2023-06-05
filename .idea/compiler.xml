@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springFirst" />
         <module name="spring-ioc-annotation" />
+        <module name="dr-spring" />
+        <module name="springFirst" />
         <module name="spring6-ioc-xml" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring6-ioc-annotation" target="17" />
+      <module name="springtest" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
