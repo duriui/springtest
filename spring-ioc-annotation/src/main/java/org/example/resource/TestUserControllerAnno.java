@@ -14,7 +14,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class TestUserControllerAnno {
 
     @Test
-    public void testUserAnno(){
+    public void testUserAn(){
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(SpringConfig.class);
         UserController myUserController = context.getBean("MyUserController", UserController.class);
