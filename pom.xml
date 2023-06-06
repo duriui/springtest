@@ -13,6 +13,7 @@
         <module>spring6-ioc-xml</module>
         <module>spring-ioc-annotation</module>
         <module>dr-spring</module>
+        <module>spring6-aop</module>
     </modules>
 
     <properties>

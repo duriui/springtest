@@ -9,6 +9,7 @@
         <module name="spring-ioc-annotation" />
         <module name="dr-spring" />
         <module name="springFirst" />
+        <module name="spring6-aop" />
         <module name="spring6-ioc-xml" />
       </profile>
     </annotationProcessing>

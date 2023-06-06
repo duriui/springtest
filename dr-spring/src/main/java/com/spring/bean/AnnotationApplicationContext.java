@@ -47,43 +47,14 @@ public class AnnotationApplicationContext implements ApplicationContext{
             // 包扫描
             loadBean(new File(filePath));
         }
-
-
         // 完成属性注入
         loadDi();
     }
 
-    private void loadDi() throws IllegalAccessException {
-        // 实例化对象在beanFactory的map集合里面
-        // 1、遍历beanFactory的map集合
-        Set<Map.Entry<Class, Object>> entries = beanFactory.entrySet();
-        for (Map.Entry<Class, Object> entry:entries) {
-            // 2、获取map集合每个对象，获取到每个对象的属性
-            Object obj = entry.getValue();
-            // 获取对象的class
-            Class<?> clazz = obj.getClass();
-            Field[] declaredFields = clazz.getDeclaredFields();
-            // 3、遍历得到每个对象的属性数组，得到每个属性
-            for (Field f:declaredFields) {
-                Di annotation = f.getAnnotation(Di.class);
-                // 4、判断属性上是否存在@Di注解
-                if(annotation!=null){
-                    // 5、若是私有属性，需要设置f.setAccessible(true);
-                    f.setAccessible(true);
-                    f.set(obj,beanFactory.get(f.getType()));
-                }
-            }
-
-        }
-
-    }
-
     // 包扫描过程，实例化
     private  void loadBean(File file) throws Exception {
-
         // 1、判断是否文件夹
         if(file.isDirectory()){
-
             // 2、获取文件夹中所有内容
             File[] childrenFiles = file.listFiles();
             // 3、判断文件夹里面是否为空，若是直接返回
@@ -107,7 +78,6 @@ public class AnnotationApplicationContext implements ApplicationContext{
                         String allName = pathWithClass.replace("/",".").replace(".class","");
                         //System.out.println(allName);
                         String allNamenew = allName.substring(1,allName.length());
-                        //System.out.println(allNamenew);
                         // 4.6、判断类上面是否有注解@Bean，若有则实例化过程
                         // 4.6.1、获取类的class
                         Class<?> clazz = Class.forName(allNamenew);
@@ -136,13 +106,28 @@ public class AnnotationApplicationContext implements ApplicationContext{
 
     }
 
-//    public static void main(String[] args) {
-//        ApplicationContext context = new AnnotationApplicationContext("org.example");
-//        Object bean = context.getBean();
-//    }
-//    public static void main(String[] args) throws Exception {
-//        AnnotationApplicationContext("org.example");
-//    }
+    private void loadDi() throws IllegalAccessException {
+        // 实例化对象在beanFactory的map集合里面
+        // 1、遍历beanFactory的map集合
+        Set<Map.Entry<Class, Object>> entries = beanFactory.entrySet();
+        for (Map.Entry<Class, Object> entry:entries) {
+            // 2、获取map集合每个对象，获取到每个对象的属性
+            Object obj = entry.getValue();
+            // 获取对象的class
+            Class<?> clazz = obj.getClass();
+            Field[] declaredFields = clazz.getDeclaredFields();
+            // 3、遍历得到每个对象的属性数组，得到每个属性
+            for (Field f:declaredFields) {
+                Di annotation = f.getAnnotation(Di.class);
+                // 4、判断属性上是否存在@Di注解
+                if(annotation!=null){
+                    // 5、若是私有属性，需要设置f.setAccessible(true);
+                    f.setAccessible(true);
+                    f.set(obj,beanFactory.get(f.getType()));
+                }
+            }
+        }
+    }
 
 
 }
