@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="book" class="org.example.di.Book">
+    <bean id="book" class="com.spring.di.Book">
         <property name="name" value="前端开发"></property>
         <property name="author" value="DR"></property>
     </bean>

@@ -3,16 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="teacher1" class="org.example.dimap.Teacher">
+    <bean id="teacher1" class="com.spring.dimap.Teacher">
         <property name="tId" value="S001"></property>
         <property name="tName" value="Tom"></property>
     </bean>
-    <bean id="teacher2" class="org.example.dimap.Teacher">
+    <bean id="teacher2" class="com.spring.dimap.Teacher">
         <property name="tId" value="S002"></property>
         <property name="tName" value="Jack"></property>
     </bean>
 
-    <bean id="student" class="org.example.dimap.Student">
+    <bean id="student" class="com.spring.dimap.Student">
         <property name="sId" value="SA001"></property>
         <property name="sName" value="李华"></property>
         <!-- map属性注入 -->
