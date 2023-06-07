@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-ioc-annotation" />
         <module name="dr-spring" />
+        <module name="spring6-Junit" />
         <module name="springFirst" />
         <module name="spring6-aop" />
         <module name="spring6-ioc-xml" />

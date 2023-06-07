@@ -23,7 +23,7 @@ public class ProxyFactory {
         ClassLoader classLoader = target.getClass().getClassLoader();
         Class<?>[] interfaces = target.getClass().getInterfaces();
         InvocationHandler invocationHandler = new InvocationHandler(){
-            // 第一个参数：代理对象
+            // 第一个参数：目标对象
             // 第二个参数：需要重写目标对象的方法
             // 第三个参数：method方法里面参数
             @Override

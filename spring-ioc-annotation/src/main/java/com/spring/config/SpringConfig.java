@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration   //配置类，有这个类就不需要spring的xml配置文件了
-@ComponentScan("org.example") // 开启组件臊面
+@ComponentScan("com.spring") // 开启组件臊面
 public class SpringConfig {
 }
