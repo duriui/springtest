@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userController" class="org.example.auto.controller.UserController" autowire="byType"></bean>
-    <bean id="userService" class="org.example.auto.service.UserServiceImpl" autowire="byType"></bean>
-    <bean id="userDao" class="org.example.auto.dao.UserDaoImpl"></bean>
+    <bean id="userController" class="com.spring.auto.controller.UserController" autowire="byType"></bean>
+    <bean id="userService" class="com.spring.auto.service.UserServiceImpl" autowire="byType"></bean>
+    <bean id="userDao" class="com.spring.auto.dao.UserDaoImpl"></bean>
 </beans>

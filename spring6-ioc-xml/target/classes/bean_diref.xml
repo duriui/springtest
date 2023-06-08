@@ -14,7 +14,7 @@
         4、在学生bean中引入util:类型定义bean，完成list、map类型属性注入
     -->
 
-    <bean id="student" class="org.example.dimap.Student">
+    <bean id="student" class="com.spring.dimap.Student">
         <property name="sId" value="SA001"></property>
         <property name="sName" value="李华"></property>
 
@@ -43,18 +43,18 @@
         </entry>
     </util:map>
 
-    <bean id="lession1" class="org.example.dimap.Lession">
+    <bean id="lession1" class="com.spring.dimap.Lession">
         <property name="lessonName" value="语文"></property>
     </bean>
-    <bean id="lession2" class="org.example.dimap.Lession">
+    <bean id="lession2" class="com.spring.dimap.Lession">
         <property name="lessonName" value="数学"></property>
     </bean>
 
-    <bean id="teacher1" class="org.example.dimap.Teacher">
+    <bean id="teacher1" class="com.spring.dimap.Teacher">
         <property name="tId" value="S001"></property>
         <property name="tName" value="Tom"></property>
     </bean>
-    <bean id="teacher2" class="org.example.dimap.Teacher">
+    <bean id="teacher2" class="com.spring.dimap.Teacher">
         <property name="tId" value="S002"></property>
         <property name="tName" value="Jack"></property>
     </bean>

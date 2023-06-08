@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-jdbc-tx" />
+        <module name="spring6-ioc-xml" />
         <module name="spring-ioc-annotation" />
         <module name="dr-spring" />
         <module name="spring6-Junit" />
         <module name="springFirst" />
         <module name="spring6-aop" />
-        <module name="spring6-ioc-xml" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
